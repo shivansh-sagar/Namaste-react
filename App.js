@@ -1,45 +1,83 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import data from "./data";
 
+/*
+ * Header
+*   - Logo
+*   -Nav Items
+* Body
+*   - Search 
+*   - restaurantContainer
+*         -RestaurantCart
+*            -Img
+*            -Name od restaurant, Star Rating, Cuisine, devivery time 
+* footer
+*   - Copyright
+*   - Links
+*   - Address
+*   - Contact
+*/
 
-const Title = () =>(
-  <h1 className="head">
-    Namaste React using JSX 🚀
-  </h1>
-);
+const Header =() =>{
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src="https://image.freepik.com/free-vector/food-logo-design_139869-254.jpg" alt="" />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  )
+};
 
-const elm = (
-  <h1>This is element</h1>
-)
+const RestaurantCard = (props) =>{
+  return (
+    <div className="res-card" id={props.id}>
+      
+      <img className="res-logo"
+      src={props.img} loading="lazy" alt="food-logo" />
+      <h3>{props.name}</h3>
+      <h4>{props.cusine}</h4>
+      <h4>{props.rating}</h4>
 
-const Paragraph = () => {
-  return <div className="paragraph">
-    <h1>By Shivanshu</h1>
+    </div>
+  );
+};
+
+const Body =() =>{
+  return (
+  <div className="body">
+    <div className="search">Serach</div>
+    <div className="res-container">
+      {data.map((item,id )=> (
+        <RestaurantCard id={id.id} img={item.img}
+        name={item.name} cusine={item.cusine} rating={item.rating}
+      />
+      ))}
+      
+
+    </div>
   </div>
-}
+  );
+};
 
-const number = 100
-
-// Functional Component - New
-
-const Heading = ()=> (
- <React.Fragment>
-  <div id="container1">
-    <Title/>  {/*  Component Composition */}
-    <h2>{number}</h2>
-    <h1 className="heading">Namaste React Functional Component</h1>
-    <Paragraph/>
-    {Title()} {/* We can also call the function */}
-  </div>
-
-  <div className="container2">
-    <Title/>
-    {elm}
-  </div>
- </React.Fragment>
-)
+const  AppLayout =() =>{
+  return (
+    <div className="app">
+      <Header/>
+      <Body/>
+    </div>
+  );
+};
 
 
 const Root = ReactDOM.createRoot(document.getElementById("Root"));
-Root.render(<Heading/>);
+Root.render(<AppLayout/>);
 
