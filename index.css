@@ -57,6 +57,12 @@ html, body {
     cursor: pointer;
 }
 
+.res-img{
+    width: 250px;
+    height: 200px;
+    
+}
+
 .res-logo{
     border-radius: 10px;
     width: 250px;
@@ -64,14 +70,53 @@ html, body {
     object-fit: cover;
 
 }
-.res-img{
-    width: 250px;
-    height: 200px;
-    
-}
+
 
 .res-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.filter-btn{
+    padding: 1rem;
+    margin: 10px;
+    cursor: pointer;
+    font-family: cursive;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+
+}
+.body-fun{
+    display: flex;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.shimmer-card{
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    
+}
+.shimmer-img{
+    width: 250px;
+    height: 200px;
+    background-color:rgb(214, 208, 215);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.shimmer-detail{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(214, 208, 215);
+    margin: auto 25px;
+    
 }
