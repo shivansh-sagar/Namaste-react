@@ -1,8 +1,13 @@
 import { LOGO_URL } from "../utils/constant";
+import { useState } from "react";
+
+
 const Header =(props) =>{
-    function th(){
-      
-    }
+   
+  const [btnName, setbtnName]= useState("login");
+  const navLinks = [{name:"Home",
+          link:"/home"},{name:"About Us"},{name:"Contact Us"},{name:"Cart"}]
+
     return (
       <div className="header">
         <div className="logo-container">
@@ -10,10 +15,12 @@ const Header =(props) =>{
         </div>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Cart</li>
+            {navLinks.map((item)=>
+              <li className="nav-links" key={item.name}>{item.name}<span></span></li>
+            )}
+            <button className="login-btn" onClick={()=>{
+              btnName==="login"?setbtnName("logout"):setbtnName("login")
+            }} >{btnName}</button>
           </ul>
         </div>
       </div>

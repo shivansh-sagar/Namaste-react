@@ -33,11 +33,48 @@ html, body {
     list-style-type: none;
 }
 .nav-items> ul> li{
-    padding: 10px;
+ 
     margin: 10px;
+   
     
 }
 
+.nav-links{
+    display: flex;
+    flex-direction: column;
+padding: 10px;
+   justify-content: center;
+    position: relative;
+
+}
+.nav-links:hover{cursor: pointer;}
+
+.nav-links span{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+     height: 90%;
+    
+ 
+ }
+
+ .nav-links span:hover{
+    cursor: pointer;
+    animation: load 500ms linear;
+    border-bottom: 2px solid orange;
+ }
+
+
+@keyframes load {
+    0%{
+        width: 0%;
+        
+    }
+    100%{
+        width: 100%;
+    }
+}
 .search{
     margin: 10px;
 }
@@ -69,6 +106,17 @@ html, body {
     height: 200px;
     object-fit: cover;
 
+}
+.login-btn{ 
+    padding: 1rem;
+    width: 80px;
+    margin: 10px;
+    cursor: pointer;
+    font-family: cursive;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
 }
 
 
