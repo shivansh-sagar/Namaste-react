@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react"
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
 const Body = () => {
@@ -20,14 +21,14 @@ const Body = () => {
     const json = await data.json();
     console.log(json)
     //optional chaining
-    setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards)
-    setfilterResturant(json?.data?.cards[2]?.data?.data?.cards)
+    setListOfRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setfilterResturant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
   const seachedText=(e)=>{
 
     setSearchText(e);
     filtersearch = listOfRestaurant.filter((res)=> (
-      res.data.name.toLowerCase().replace(/ /g,"").includes(searchText.toLowerCase().replace(/ /g,""))
+      res.info.name.toLowerCase().replace(/ /g,"").includes(searchText.toLowerCase().replace(/ /g,""))
       // res.data.cuisines.map((item)=> {(item.toLowerCase().replace(/ /g,"") == searchText.toLowerCase().replace(/ /g,"")? true: false)})
      ) )
       
@@ -37,7 +38,7 @@ const Body = () => {
   }
 
 
-  return listOfRestaurant.length===0? <Shimmer/>:  (
+  return listOfRestaurant.length==0? <Shimmer/>:  (
     <div className="body">
       <div className="body-fun">
  
@@ -46,7 +47,7 @@ const Body = () => {
           <button className="filter-btn" onClick={() => {
 
             const filtereData =listOfRestaurant.filter(
-              (res) => res.data.avgRating > 4
+              (res) => res.info.avgRating > 4
 
             );
 
@@ -58,14 +59,14 @@ const Body = () => {
           <input  className=" search" type="text" value={searchText} onChange={(e)=>{seachedText(e.target.value)}}/>
           <button className="" onClick={()=>{
             console.log(searchText)
-            filtersearch = listOfRestaurant.filter((res)=> res.data.name.toLowerCase().includes(searchText.toLowerCase())) 
+            filtersearch = listOfRestaurant.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())) 
             
         
             setfilterResturant(filtersearch)
           }}>Search</button>
           <button onClick={()=>{
             const vegFilter= listOfRestaurant.filter(
-              (res) => (res.data.veg? false: true)
+              (res) => (res.info.veg? false: true)
               
             );
             setfilterResturant(vegFilter)
@@ -74,7 +75,8 @@ const Body = () => {
       </div>
       <div className="res-container">
         {
-          filterResturant.map((restaurant) => (<RestaurantCard key={restaurant.id} resData={restaurant} />))
+          filterResturant.map((restaurant) => (
+          <Link className="card-link-txt" key={restaurant.info.id} to ={"resturant/"+ restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>))
         }
       </div>
     </div>

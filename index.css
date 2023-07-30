@@ -85,6 +85,7 @@ padding: 10px;
     border-radius: 10px;
 
 }
+
 .res-card:hover{
     /* border: 1px solid black; */
     box-shadow:10px 10px 8px rgb(214, 208, 215);
@@ -174,4 +175,62 @@ padding: 10px;
 .contact-heading{
     color: aquamarine;
     
+}
+
+/* delete after use */
+
+.ResMenuContainer{
+    
+    display: flex;
+    justify-content: space-between;
+    font-family: cursive;
+    
+
+}
+.ResMenuName{
+    border: 2px solid rgb(255, 255, 255);
+}
+.myimg{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    margin: 20px;
+   
+}
+.card-link-txt{
+    text-decoration: none;
+    color: black;
+}
+.MenuItems{
+    margin: 20px;
+    list-style:none;
+}
+.MenuItemList{
+    padding: 10px;
+    border-bottom: 2px solid orange;
+    display: flex;
+    justify-content: space-between;
+}
+.MenuItems-name{
+    border: 1px solid brown;
+    width: 50%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.MenuItems-name > P {
+    font-family: cursive;
+
+}
+.MenuItems-img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    margin: 20px;  
 }

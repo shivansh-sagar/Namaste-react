@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import About from "./components/About"
 import Contact from "./components/Contact";
 import Error from "./components/Error";
+import ResturantMenu from "./components/ResturantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 // not using keys (not acceptable) <<< index as key <<<<<<< unique id (best practice)
 
@@ -34,6 +35,10 @@ const  AppLayout =() =>{
       {
         path:"/contact",
         element:<Contact/>
+      },
+      {
+        path:"/resturant/:resId",
+        element:<ResturantMenu/>
       }
     ],
     errorElement:<Error/>
