@@ -20,20 +20,27 @@ html, body {
     display: flex;
     justify-content: space-between;
     border: 1px solid var(--black);
+    height: 100px;
+    background-color: rgb(55, 62, 62);
+}
+.logo-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    
 }
 .logo{
-    width: 150px;
+   width: 80px;
+   padding: 5px;
 }
 
 .nav-items{
-    margin: 5px;
     font-family: cursive;
 }
 .nav-items-bars{
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 160, 37);
     font-size: 18px;
 }
 
@@ -124,6 +131,10 @@ padding: 10px;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.card-link-txt{
+    text-decoration: none;
+    color: black;
+}
 
 .filter-btn{
     padding: 1rem;
@@ -185,10 +196,8 @@ padding: 10px;
     justify-content: space-between;
     font-family: cursive;
     
+    padding: 0.5rem;
 
-}
-.ResMenuName{
-    border: 2px solid rgb(255, 255, 255);
 }
 .myimg{
     width: 150px;
@@ -199,9 +208,29 @@ padding: 10px;
     margin: 20px;
    
 }
-.card-link-txt{
-    text-decoration: none;
-    color: black;
+.ResMenuName{
+    font-size:40px;
+
+}
+
+.ResMenu-ContainerRating{
+    width: 80px;
+    border-radius: 15px;
+    display: flex;
+    
+    align-items: center;
+    
+    background-color: orange;
+    
+}
+
+
+.ResMenu-Rating{
+    color: #fff;
+    width: 100%;
+    background-color: rgb(255, 166, 0);
+    padding-left:25% ;
+    
 }
 .MenuItems{
     margin: 20px;
@@ -213,8 +242,7 @@ padding: 10px;
     display: flex;
     justify-content: space-between;
 }
-.MenuItems-name{
-    border: 1px solid brown;
+.MenuItems-container1{
     width: 50%;
     height: auto;
     display:flex;
@@ -222,7 +250,7 @@ padding: 10px;
     align-items: center;
 
 }
-.MenuItems-name > P {
+.MenuItems-container1 > P {
     font-family: cursive;
 
 }
@@ -233,4 +261,11 @@ padding: 10px;
     object-position: center;
     border-radius: 20px;
     margin: 20px;  
+}
+.MenuItems-container2{
+    height: auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
 }
