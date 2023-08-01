@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import "../style/Body.css"
 
 
 const Body = () => {
@@ -56,7 +57,7 @@ const Body = () => {
 
           }}> Top Rated Restaurant</button>
 
-          <input  className=" search" type="text" value={searchText} onChange={(e)=>{seachedText(e.target.value)}}/>
+          <input  className=" search" type="text" placeholder="Search Restaurant" value={searchText} onChange={(e)=>{seachedText(e.target.value)}}/>
           <button className="" onClick={()=>{
             console.log(searchText)
             filtersearch = listOfRestaurant.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())) 
@@ -64,7 +65,7 @@ const Body = () => {
         
             setfilterResturant(filtersearch)
           }}>Search</button>
-          <button onClick={()=>{
+          <button  onClick={()=>{
             const vegFilter= listOfRestaurant.filter(
               (res) => (res.info.veg? false: true)
               

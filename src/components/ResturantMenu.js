@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 import { CDN_URL } from "../utils/constant";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constant";
+import "../style/RestaurantMenu.css"
 
 
 const dummy = 'https://image.freepik.com/free-vector/food-logo-design_139869-254.jpg';
@@ -49,8 +50,8 @@ const ResturantMenu = () => {
             </div>
             <img className="myimg" src={info.cloudinaryImageId ? CDN_URL + info.cloudinaryImageId : dummy} />
         </div>
-        <div>
-            <h2>Menu</h2>
+        <div className="Menu-cuisines">
+            <h2 className="ResMenu-Menu">Menu</h2>
             <i>{info.availabilityServiceabilityMessage}</i>
 
 

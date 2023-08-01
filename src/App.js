@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import ResturantMenu from "./components/ResturantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Footer from "./components/Footer";
 // not using keys (not acceptable) <<< index as key <<<<<<< unique id (best practice)
 
 const  AppLayout =() =>{
@@ -16,6 +17,7 @@ const  AppLayout =() =>{
     <div className="app" >
       <Header />
       <Outlet/>
+      <Footer/>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { LOGO_URL } from "../utils/constant";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"
-
+import "../style/Header.css"
 
 const Header =(props) =>{
    
@@ -14,7 +14,8 @@ const Header =(props) =>{
     return (
       <div className="header">
         <div className="logo-container">
-          <img className="logo" src={logo} alt="" />
+        <Link to="/"><img className="logo" src={logo} alt="" /></Link>
+          
         </div>
         <div className="nav-items">
           <ul>

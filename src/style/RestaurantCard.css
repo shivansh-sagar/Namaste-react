@@ -1,0 +1,30 @@
+
+.res-card{
+    width: 250px;
+    font-family:cursive;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+.res-card:hover{
+    /* border: 1px solid black; */
+    box-shadow:10px 10px 8px rgb(214, 208, 215);
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.res-img{
+    width: 250px;
+    height: 200px;
+    
+}
+
+.res-logo{
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+
+}
