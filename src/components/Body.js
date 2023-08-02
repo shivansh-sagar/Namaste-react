@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import "../style/Body.css"
+import {BiDownArrowAlt} from "react-icons/bi";
 
 
 const Body = () => {
@@ -17,7 +18,8 @@ const Body = () => {
   },[])
   
   const fetchData=async ()=>{
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2585371&lng=82.06598579999999&page_type=DESKTOP_WEB_LISTING");
+    //const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2585371&lng=82.06598579999999&page_type=DESKTOP_WEB_LISTING"); //sultanpur
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2856374&lng=72.8691092&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"); //Mumbai
 
     const json = await data.json();
     console.log(json)
@@ -31,6 +33,7 @@ const Body = () => {
     filtersearch = listOfRestaurant.filter((res)=> (
       res.info.name.toLowerCase().replace(/ /g,"").includes(searchText.toLowerCase().replace(/ /g,""))
       // res.data.cuisines.map((item)=> {(item.toLowerCase().replace(/ /g,"") == searchText.toLowerCase().replace(/ /g,"")? true: false)})
+      
      ) )
       
      
@@ -55,23 +58,24 @@ const Body = () => {
             setfilterResturant(filtereData)
             console.log(listOfRestaurant)
 
-          }}> Top Rated Restaurant</button>
+          }}><BiDownArrowAlt/> Top Rated Restaurant</button>
 
           <input  className=" search" type="text" placeholder="Search Restaurant" value={searchText} onChange={(e)=>{seachedText(e.target.value)}}/>
-          <button className="" onClick={()=>{
+            <button className="" onClick={()=>{
             console.log(searchText)
             filtersearch = listOfRestaurant.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())) 
             
         
             setfilterResturant(filtersearch)
           }}>Search</button>
+         
           <button  onClick={()=>{
             const vegFilter= listOfRestaurant.filter(
               (res) => (res.info.veg? false: true)
               
             );
             setfilterResturant(vegFilter)
-          }}>veg</button>
+          }}> veg</button>
         </div>
       </div>
       <div className="res-container">
