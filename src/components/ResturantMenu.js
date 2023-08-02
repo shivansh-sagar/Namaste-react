@@ -55,7 +55,7 @@ const ResturantMenu = () => {
             <i>{info.availabilityServiceabilityMessage}</i>
 
 
-            {info.cuisines.map((item, id) => <p>{id + 1} {item}</p>)}
+            {/* {info.cuisines.map((item, id) => <p>{id + 1} {item}</p>)} */}
         </div>
         <div>
 
@@ -66,7 +66,8 @@ const ResturantMenu = () => {
                         <p>{item.card.info.name}</p>
                         <p>{item.card.info.description ? item.card.info.description: defaultTxt}</p>
                     </div>
-                    <hr />
+                   <hr/>
+                   
                     <div className="MenuItems-container2">
                         <h4>{"Rs" + " "}{item.card.info.price / 100 || item.card.info.defaultPrice / 100}</h4>
                         <img className="MenuItems-img" src={item.card.info.imageId ? CDN_URL + item.card.info.imageId : dummy} />

@@ -32,7 +32,7 @@
     cursor: pointer;
     font-family: cursive;
     color: #fff;
-    background-color: orange;
+    background-color:var(--primary);
     border: none;
     border-radius: 20px;
 }

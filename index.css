@@ -1,12 +1,13 @@
 :root{
     --black:#12162c;
     --white:#fff;
+    --primary: #e14141;
 }
 
 html, body {
     margin: 0;
     height: 100%;
-    background-color: #fff;
+    background-color: #ffffff;
     }
 
 .dark{
@@ -57,4 +58,8 @@ padding: 10px;
 
 
 
-/* delete after use */
+/* Styling of user-card */
+.user-card{
+    padding: 10px;
+    border: 2px solid red;
+}

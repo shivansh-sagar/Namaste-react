@@ -6,6 +6,7 @@
     font-family: cursive;
     
     padding: 0.5rem;
+    /* border: 2px solid green; */
 
 }
 .myimg{
@@ -29,15 +30,15 @@
     
     align-items: center;
     
-    background-color: orange;
+    background-color: var(--primary);
     
 }
 
 
 .ResMenu-Rating{
-    color: #fff;
+    color: #ffffff;
     width: 100%;
-    background-color: rgb(255, 166, 0);
+    background-color: var(--primary);
     padding-left:25% ;
     
 }
@@ -50,15 +51,31 @@
 .MenuItems{
     margin: 20px;
     list-style:none;
-}   
+}  
+
+.Menu-cuisines{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
 
 .MenuItemList{
     padding: 10px;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid var(--primary);
+    border-radius: 10px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
 }
+.MenuItemList:hover{
+    box-shadow:10px 10px 8px rgb(255, 140, 138);
+    transition: 100ms;
+    cursor: pointer;
+}
+
 .MenuItemList:nth-of-type(2n){
     background-color: rgb(236, 237, 237);
 }
@@ -87,6 +104,5 @@
     display:flex;
     flex-direction: row;
     align-items: center;
-    
 
 }
