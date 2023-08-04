@@ -20,8 +20,6 @@ class About extends React.Component {
                 <h2>This is about </h2>
 
                 <UserClass name={"shivanshu sagar (class)"} />
-                <UserClass name={"Elon musk (class)"} />
-                <UserClass name={"aloo (class)"} />
             </div>
         )
     }
