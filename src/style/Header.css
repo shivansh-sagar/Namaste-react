@@ -1,13 +1,15 @@
 .header{
     display: flex;
     justify-content: space-between;
-    
+    width: 100%;
     height: 100px;
-    background-image: linear-gradient(180deg, #302e2d, #847d75, #cbc8c8);
+    border-bottom: 4px solid var(--primary);
+   
 }
 .logo-container{
     margin-top: auto;
     margin-bottom: auto;
+    text-decoration: none;
     
 }
 .logo{
@@ -22,8 +24,9 @@
     padding: 15px;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 18px;
+    text-shadow:4px 4px 8px rgb(190, 190, 190);
 }
 .login-btn{ 
     padding: 1rem;
@@ -36,9 +39,6 @@
     border: none;
     border-radius: 20px;
 }
-
-
-
 .contact-main{
     background-color: rgb(138, 137, 137);
     width: 100%;

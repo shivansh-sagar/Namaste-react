@@ -43,29 +43,27 @@ const ResturantMenu = () => {
     return resInfo === null ? (
         <Shimmer />
     ) : (<>
-        <div className="ResMenuContainer">
-            <img className="ResMenu-bg-img" src={info.cloudinaryImageId ? CDN_URL + info.cloudinaryImageId : dummy} />
-            <div className="ResMenuContainer1">
 
-                <div>
-                    <h1 className="ResMenuName" >{info.name}</h1>
-                    <div className="ResMenu-ContainerRating">
-                        <p className="ResMenu-Rating"><AiFillStar />{info.avgRating}</p>
-                    </div>
+        <div className="ResturantMain-cont">
 
-                </div>
+            <img className="ResturantMenu-img" src={info.cloudinaryImageId ? CDN_URL + info.cloudinaryImageId : dummy} alt="" />
+
+            <div className="ResturantMenu-txt">
+                <span>
+                    <h1 className="ResMenuName">{info.name}</h1>
+                    <p className="ResMenu-Rating"><AiFillStar />{info.avgRating}</p>
+                </span>
                 <img className="myimg" src={info.cloudinaryImageId ? CDN_URL + info.cloudinaryImageId : dummy} />
             </div>
+
         </div>
-
-
 
         <div className="Menu-cuisines">
             <h2 className="ResMenu-Menu"><MdRestaurantMenu />Menu</h2>
-            <i>{info.availabilityServiceabilityMessage}</i>
+            <i> Our cuisines items</i>
 
 
-            {/* {info.cuisines.map((item, id) => <p>{id + 1} {item}</p>)} */}
+            {info.cuisines.map((item, id) => <p>{id + 1} {item}</p>)}
         </div>
         <div>
 

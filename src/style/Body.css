@@ -18,10 +18,12 @@
     background-color:var(--primary);
     border: none;
     border-radius: 20px;
+    
 
 }
 .body-fun{
     display: flex;
+   
 }
 
 .search{
