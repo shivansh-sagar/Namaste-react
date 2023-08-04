@@ -13,20 +13,12 @@
 
 
 
-## Namaste food
-/*
- * Header
-*   - Logo
-*   -Nav Items
-* Body
-*   - Search 
-*   - restaurantContainer
-*         -RestaurantCart
-*            -Img
-*            -Name od restaurant, Star Rating, Cuisine, devivery time 
-* footer
-*   - Copyright
-*   - Links
-*   - Address
-*   - Contact
-*/
+# React life cycle
+
+## Reander Phase
+- constructor
+- Render
+
+## commit Phase
+- React updates DOMS
+- ComponentdidMount

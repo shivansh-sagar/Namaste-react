@@ -8,17 +8,17 @@ class userclass extends React.Component{
         count : 0,
         count2 : 1
        }
-       console.log(" child constructor")
+       console.log(this.props.name+" child constructor")
     }
 
     componentDidMount(){
-        console.log(" child Component did mount")
+        console.log(this.props.name+" child Component did mount")
     }
     
     render(){
         const {name}=this.props;
         const {count,count2}=this.state
-        console.log(" child render")
+        console.log(this.props.name+" child render")
         return(
             <div className="User-card">
                 <h1>Count={count}</h1>
