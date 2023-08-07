@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import "../style/Body.css"
 import {BiDownArrowAlt} from "react-icons/bi";
+import {BsSearchHeartFill} from "react-icons/bs";
 
 
 const Body = () => {
@@ -58,30 +59,37 @@ const Body = () => {
             setfilterResturant(filtereData)
             console.log(listOfRestaurant)
 
-          }}><BiDownArrowAlt/> Top Rated Restaurant</button>
+          }}><BiDownArrowAlt/> Top Rated Restaurant
+          </button>
+        </div>
 
-          <input  className=" search" type="text" placeholder="Search Restaurant" value={searchText} onChange={(e)=>{seachedText(e.target.value)}}/>
-            <button className="" onClick={()=>{
-            console.log(searchText)
-            filtersearch = listOfRestaurant.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())) 
-            
-        
-            setfilterResturant(filtersearch)
-          }}>Search</button>
+{/* new search box */}
+        <div className="search-box">
+            <button className="btn-search" 
+            onClick={()=>{
+              filtersearch = listOfRestaurant.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())) 
+              
+              setfilterResturant(filtersearch)
+            }}
+            ><BsSearchHeartFill/></button>
+            <input type="text" className="input-search" placeholder="Type to search" value={searchText} onChange={(e)=>{seachedText(e.target.value)}} />
+        </div>
          
-          <button  onClick={()=>{
+        <button  onClick={()=>{
             const vegFilter= listOfRestaurant.filter(
               (res) => (res.info.veg? false: true)
               
             );
             setfilterResturant(vegFilter)
-          }}> veg</button>
-        </div>
+          }}> veg
+        </button>
+       
       </div>
       <div className="res-container">
         {
-          filterResturant.map((restaurant) => (
+         filterResturant.length != 0 ? filterResturant.map((restaurant) => (
           <Link className="card-link-txt" key={restaurant.info.id} to ={"resturant/"+ restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>))
+          : <p className="message-para1">Not<p className="message-para2">founD</p></p>
         }
       </div>
     </div>
