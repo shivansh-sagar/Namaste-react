@@ -14,16 +14,24 @@ class userclass extends React.Component{
     }
 
     async componentDidMount(){
+
+        // this.timer = setInterval(()=>{
+        //     console.log("Namaste React op")
+        // },1000)
         // console.log(this.props.name+" child Component did mount")
         const data = await fetch("https://api.github.com/users/shivansh-sagar");
         const json = await data.json();
-        console.log(json)
+       
 
         this.setState({
             userInfo:json
         })
     }
-    
+    componentWillUnmount(){
+        // clearInterval(this.timer);
+        // console.log("Component will unmount")
+
+    }
     render(){
         const {name , location, blog} = this.state.userInfo
 
