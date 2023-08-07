@@ -45,7 +45,7 @@
 
 .MenuItemList:hover {
     width: 100%;
-    box-shadow: 10px 10px 8px rgb(255, 140, 138);
+    box-shadow: 10px 10px 8px rgb(224, 138, 255);
     transition: 100ms;
     cursor: pointer;
     animation-name: example;
@@ -55,12 +55,12 @@
 
 @keyframes example {
     to {
-        background-color: rgb(250, 209, 209);
+        background-color: rgb(231, 209, 250);
     }
 }
 
 .MenuItemList:nth-of-type(2n) {
-    background-color: rgb(236, 237, 237);
+    background-color: rgb(243, 231, 248);
 }
 
 .MenuItems-container1 {
@@ -146,6 +146,6 @@
     text-align: center;
     padding: 4px;
     border-radius: 10px;
-    background: var(--primary);
+    background: lightgreen;
     font-size: 16px;
 }

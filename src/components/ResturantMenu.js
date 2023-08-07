@@ -71,7 +71,7 @@ const ResturantMenu = () => {
                 {menu.map(item => <div className="MenuItemList" key={item.card.info
                     .id}>
                     <div className="MenuItems-container1">
-                        <p>{item.card.info.name}</p>
+                        <strong><p>{item.card.info.name}</p></strong>
                         <p>{item.card.info.description ? item.card.info.description : defaultTxt}</p>
                     </div>
                     <hr />

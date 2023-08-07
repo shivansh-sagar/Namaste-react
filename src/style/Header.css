@@ -26,7 +26,10 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 18px;
-    text-shadow:4px 4px 8px rgb(190, 190, 190);
+}
+.nav-items-bars:hover{
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
 }
 .login-btn{ 
     padding: 1rem;
