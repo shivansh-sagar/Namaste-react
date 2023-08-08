@@ -9,7 +9,9 @@
 .logo-container{
     margin-top: auto;
     margin-bottom: auto;
-    text-decoration: none;
+    margin-left: 2rem;
+    font-size: large;
+    color: var(--primary);
     
 }
 .logo{

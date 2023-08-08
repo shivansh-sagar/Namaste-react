@@ -1,5 +1,6 @@
 .footer-container{
     width: 100%;
     height: 30%;
-    background-image: linear-gradient(180deg, #cbc8c8, #847d75,#302e2d);
+    border-top: 4.5px solid var(--primary);
+    background-image: linear-gradient(180deg, #fbcff8, #d18dd6,#be68dd);
 } 

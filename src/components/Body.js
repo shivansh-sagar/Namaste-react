@@ -2,8 +2,9 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 import "../style/Body.css"
-import {BiDownArrowAlt} from "react-icons/bi";
+import {AiOutlineArrowUp} from "react-icons/ai";
 import {BsSearchHeartFill} from "react-icons/bs";
 
 
@@ -28,6 +29,17 @@ const Body = () => {
     setListOfRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setfilterResturant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
+
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus==false){
+
+  return(
+    <h1>look like you're offline!! Please check your internet connection</h1>
+  )
+  }
+
+
+//search_box logic no enter require
   const seachedText=(e)=>{
 
     setSearchText(e);
@@ -59,7 +71,7 @@ const Body = () => {
             setfilterResturant(filtereData)
             console.log(listOfRestaurant)
 
-          }}><BiDownArrowAlt/> Top Rated Restaurant
+          }}><AiOutlineArrowUp/> Top Rated Restaurant
           </button>
         </div>
 

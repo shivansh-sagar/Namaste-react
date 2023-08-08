@@ -1,9 +1,7 @@
-import { LOGO_URL } from "../utils/constant";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png"
 import "../style/Header.css"
-import {GiForkKnifeSpoon} from 'react-icons/gi'
+import {MdOutlineFastfood} from 'react-icons/md'
 
 
 
@@ -17,7 +15,7 @@ const Header =(props) =>{
     return (
       <div className="header">
         <div className="logo-container">
-        <Link to="/"><GiForkKnifeSpoon/>Moody Foody</Link>
+          <p><MdOutlineFastfood/>Moody Foody</p>
           
         </div>
         <div className="nav-items">
