@@ -22,3 +22,6 @@
 ## commit Phase
 - React updates DOMS
 - ComponentdidMount
+
+# Chunking, Code Splitting, Dynamic Bundling, Lazy loading, OnDemand Loading
+-   Is use to break down our app into smaller logical chunks

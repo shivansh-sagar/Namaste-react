@@ -6,11 +6,14 @@ const useOnlineStatus = ()=>{
     useEffect(()=>{
         window.addEventListener("offline",()=>{
             setOnlineStatus(false)
-        })
+            console.log("offline")
+        });
+
         window.addEventListener("Online",()=>{
             setOnlineStatus(true)
-        })
-    })
+            console.log("online")
+        });
+    },[]);
 
     return onlineStatus;
 }

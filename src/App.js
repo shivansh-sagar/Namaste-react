@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 
 import Header from "./components/Header";
@@ -9,7 +9,11 @@ import Error from "./components/Error";
 import ResturantMenu from "./components/ResturantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
+import Shimmer from "./components/Shimmer";
+
 // not using keys (not acceptable) <<< index as key <<<<<<< unique id (best practice)
+
+const Grocery= lazy(()=>import("./components/Grocery"))
 
 const  AppLayout =() =>{
   const [theme, setTheme] = React.useState("light");
@@ -37,6 +41,14 @@ const  AppLayout =() =>{
       {
         path:"/contact",
         element:<Contact/>
+      },
+      {
+        path:"/Grocery",
+        element:(
+        <Suspense fallback={<h1><Shimmer/></h1>}>
+          <Grocery/>
+        </Suspense>
+        ),
       },
       {
         path:"/resturant/:resId",

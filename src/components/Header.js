@@ -23,7 +23,7 @@ const Header =(props) =>{
            <Link className="nav-items-bars" to="/">Home</Link>
            <Link className="nav-items-bars"  to="/about">AboutUs</Link>
            <Link className="nav-items-bars"  to="/contact">Contact Us</Link>
-           <Link className="nav-items-bars"  to="/cart">Cart</Link>
+           <Link className="nav-items-bars"  to="/Grocery">Grocery</Link>
             <button className="login-btn" onClick={()=>{
               btnName==="login"?setbtnName("logout"):setbtnName("login")
             }} >{btnName}</button>
