@@ -52,9 +52,9 @@ const Body = () => {
     <div className="body">
       <div className="body-fun">
 
-
+        {/* Top rated Restaurant */}
         <div className="filter">
-          <button className="filter-btn" onClick={() => {
+          <button className="filter-btn p-1 " onClick={() => {
 
             const filtereData = listOfRestaurant.filter(
               (res) => res.info.avgRating > 4
@@ -68,6 +68,16 @@ const Body = () => {
           </button>
         </div>
 
+        {/* veg filter */}
+        {/* <button onClick={() => {
+          const vegFilter = listOfRestaurant.filter(
+            (res) => (res.info.veg ? true : false)
+
+          );
+          setfilterResturant(vegFilter)
+        }}> veg
+        </button> */}
+
         {/* new search box */}
         <div className="search-box">
           <button className="btn-search"
@@ -80,14 +90,7 @@ const Body = () => {
           <input type="text" className="input-search" placeholder="Type to search" value={searchText} onChange={(e) => { seachedText(e.target.value) }} />
         </div>
 
-        <button onClick={() => {
-          const vegFilter = listOfRestaurant.filter(
-            (res) => (res.info.veg ? false : true)
-
-          );
-          setfilterResturant(vegFilter)
-        }}> veg
-        </button>
+       
 
       </div>
       <div className="res-container">

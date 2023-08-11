@@ -1,5 +1,6 @@
 import { CDN_URL } from "../utils/constant";
 import "../style/RestaurantCard.css"
+import {AiFillStar} from 'react-icons/Ai'
 
 const RestaurantCard = (props) =>{
     const {resData} = props;
@@ -13,10 +14,11 @@ const RestaurantCard = (props) =>{
           <img className="res-logo"
           src={img} loading="lazy" alt="food-logo" />
         </div>
-        <h3>{name}🍲 </h3>
-        <details><summary>{cuisines.slice(0,2).join(", ")}</summary><p>{cuisines.slice(2).join(", ")}</p></details>
-        <h4>{avgRating}⭐</h4>
-  
+        <div className="ml-8">
+          <h3 className="text-xl">{name}🍲 </h3>
+          <details><summary>{cuisines.slice(0,2).join(", ")}</summary><p>{cuisines.slice(2).join(", ")}</p></details>
+          <h4 className="#f9fafb"><AiFillStar/>{avgRating}</h4>
+         </div>
       </div>
     );
   };

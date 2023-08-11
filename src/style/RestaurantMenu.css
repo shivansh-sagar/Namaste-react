@@ -8,10 +8,6 @@
 
 }
 
-.Menu-cuisines {
-    font-family: cursive;
-}
-
 .ResMenu-Menu {
     font-size: 25px;
 }
@@ -72,10 +68,6 @@
 
 }
 
-.MenuItems-container1>P {
-    font-family: cursive;
-
-}
 
 .MenuItems-img {
     width: 100px;
@@ -117,7 +109,6 @@
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    font-family: cursive;
     transform: translateY(50);
     
     
