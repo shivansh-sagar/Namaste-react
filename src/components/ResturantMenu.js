@@ -74,10 +74,12 @@ const ResturantMenu = () => {
         </div> */}
 
         {/* catagories accodions */}
-        { categories.map((category)=>
+        <div className="flex flex-col align-middle"> { categories.map((category)=>
         (
             <Restaurantcategory data={category?.card?.card}/>
         ))}
+        </div>
+       
 
     </>
     )

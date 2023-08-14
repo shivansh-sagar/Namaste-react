@@ -1,0 +1,25 @@
+.MenuItemList {
+  
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    transition: width 100ms;
+
+
+}
+
+.MenuItemList:hover {
+    width: 100%;
+    box-shadow: 10px 10px 8px rgb(224, 138, 255);
+    transition: 100ms;
+    cursor: pointer;
+    animation-name: example;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    to {
+        background-color: rgb(231, 209, 250);
+    }
+}
