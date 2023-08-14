@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 import Header from "./components/Header";
@@ -15,11 +15,22 @@ import Shimmer from "./components/Shimmer";
 
 const Grocery= lazy(()=>import("./components/Grocery"))
 
+
+
 const  AppLayout =() =>{
-  const [theme, setTheme] = React.useState("light");
+  
+  // const [theme, setTheme] = React.useState("dark");
+  // const changemode=()=>{
+  //   if(theme==="light"){
+  //     setTheme('dark')
+  //   }
+  //   else{
+  //     setTheme('dark')
+  //   }
+  // }
   return (
     <div className="app" >
-      <Header />
+      <Header/>
       <Outlet/>
       <Footer/>
     </div>

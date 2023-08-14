@@ -8,12 +8,8 @@ import {MdOutlineFastfood} from 'react-icons/md'
 const Header =(props) =>{
    
   const [btnName, setbtnName]= useState("login");
-  console.log("header render")
-
-
-
     return (
-      <div className="header">
+      <div className='header shadow-md shadow-purple-3004 '>
         <div className="logo-container">
           <p><MdOutlineFastfood/>Moody Foody</p>
           
@@ -24,8 +20,8 @@ const Header =(props) =>{
            <Link className="nav-items-bars"  to="/about">AboutUs</Link>
            <Link className="nav-items-bars"  to="/contact">Contact Us</Link>
            <Link className="nav-items-bars"  to="/Grocery">Grocery</Link>
-            <button className="login-btn" onClick={()=>{
-              btnName==="login"?setbtnName("logout"):setbtnName("login")
+            <button className="login-btn" onClick={()=>{ {props.changemode}
+              btnName==="login"?setbtnName("light"):setbtnName("dark")
             }} >{btnName}</button>
           </ul>
         </div>

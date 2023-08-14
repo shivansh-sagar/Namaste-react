@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { isVeg } from "./RestaurantCard";
 import { useState, useEffect } from "react"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -8,19 +8,21 @@ import { AiOutlineArrowUp } from "react-icons/ai";
 import { BsSearchHeartFill } from "react-icons/bs";
 
 
-const Body = () => {                   
+const Body = () => {
 
   //Local State Variable - Super powerful variable
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
-  const [filterResturant, setfilterResturant] = useState([])
-  const [searchText, setSearchText] = useState("")
+  const [filterResturant, setfilterResturant] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardVeg = isVeg(RestaurantCard)
 
   useEffect(() => {
     fetchData();
   }, [])
 
   const fetchData = async () => {
-    //const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2585371&lng=82.06598579999999&page_type=DESKTOP_WEB_LISTING"); //sultanpur
+    // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2585371&lng=82.06598579999999&page_type=DESKTOP_WEB_LISTING"); //sultanpur
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2856374&lng=72.8691092&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"); //Mumbai
 
     const json = await data.json();
@@ -90,13 +92,19 @@ const Body = () => {
           <input type="text" className="input-search" placeholder="Type to search" value={searchText} onChange={(e) => { seachedText(e.target.value) }} />
         </div>
 
-       
+
 
       </div>
       <div className="res-container">
         {
           filterResturant.length != 0 ? filterResturant.map((restaurant) => (
-            <Link className="card-link-txt" key={restaurant.info.id} to={"resturant/" + restaurant.info.id}><RestaurantCard resData={restaurant} /></Link>))
+            <Link className="card-link-txt" key={restaurant.info.id} to={"resturant/" + restaurant.info.id}>
+              {restaurant.info.veg ? (
+                <RestaurantCardVeg resData={restaurant} />
+              ) : (
+                <RestaurantCard resData={restaurant} />
+              )}
+            </Link>))
             : <p className="message-para1">Not<p className="message-para2">founD</p></p>
         }
       </div>
