@@ -88,7 +88,7 @@
 
 .MenuItemList:hover {
     width: 100%;
-    box-shadow: 10px 10px 8px rgb(224, 138, 255);
+    box-shadow: 10px 10px 8px rgb(127, 113, 132);
     transition: 100ms;
     cursor: pointer;
     animation-name: example;
@@ -129,6 +129,8 @@
     align-items: center;
 
 }
-
+.veg{
+    border: 2px solid greenyellow;
+}
 
 

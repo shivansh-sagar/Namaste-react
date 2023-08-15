@@ -10,7 +10,7 @@
 
 .MenuItemList:hover {
     width: 100%;
-    box-shadow: 10px 10px 8px rgb(224, 138, 255);
+    box-shadow: 10px 10px 8px rgb(171, 171, 171);
     transition: 100ms;
     cursor: pointer;
     animation-name: example;
