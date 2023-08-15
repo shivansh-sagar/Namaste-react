@@ -70,15 +70,7 @@ const Body = () => {
           </button>
         </div>
 
-        {/* veg filter */}
-        {/* <button onClick={() => {
-          const vegFilter = listOfRestaurant.filter(
-            (res) => (res.info.veg ? true : false)
-
-          );
-          setfilterResturant(vegFilter)
-        }}> veg
-        </button> */}
+       
 
         {/* new search box */}
         <div className="search-box">
