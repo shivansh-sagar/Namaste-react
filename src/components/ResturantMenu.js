@@ -6,6 +6,7 @@ import "../style/RestaurantMenu.css"
 import { AiFillStar } from 'react-icons/ai'
 import { MdRestaurantMenu } from 'react-icons/md'
 import Restaurantcategory from "./RestaurantCategory";
+import { useState } from "react";
 
 
 const dummy = 'https://image.freepik.com/free-vector/food-logo-design_139869-254.jpg';
@@ -76,7 +77,7 @@ const ResturantMenu = () => {
         {/* catagories accodions */}
         <div className="flex flex-col align-middle"> { categories.map((category)=>
         (
-            <Restaurantcategory data={category?.card?.card}/>
+            <Restaurantcategory key={category?.card?.card.title} data={category?.card?.card}/>
         ))}
         </div>
        
