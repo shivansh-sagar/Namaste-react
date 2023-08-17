@@ -21,7 +21,7 @@ const Header =(props) =>{
            <Link className="nav-items-bars"  to="/contact">Contact Us</Link>
            <Link className="nav-items-bars"  to="/Grocery">Grocery</Link>
             <button className="login-btn" onClick={()=>{ {props.changemode}
-              btnName==="login"?setbtnName("light"):setbtnName("dark")
+              btnName==="login"?setbtnName("logout"):setbtnName("login")
             }} >{btnName}</button>
           </ul>
         </div>

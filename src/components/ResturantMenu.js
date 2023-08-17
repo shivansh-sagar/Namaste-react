@@ -24,6 +24,8 @@ const ResturantMenu = () => {
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
         );
     console.log(categories)
+    
+    const[showIndex, setShowIndex]= useState(1)
 
     return resInfo === null ? (
         <Shimmer />
@@ -49,11 +51,16 @@ const ResturantMenu = () => {
             {info.cuisines.map((item, id) => <p>{id + 1} {item}</p>)}
         </div>
         
+        
 
         {/* catagories accodions */}
-        <div className="flex flex-col align-middle"> { categories.map((category)=>
+        <div className="flex flex-col align-middle"> { categories.map((category, index)=>
         (
-            <Restaurantcategory key={category?.card?.card.title} data={category?.card?.card}/>
+            <Restaurantcategory key={category?.card?.card.title}
+             data={category?.card?.card}
+             showItem={index === showIndex?true :false}
+             setShowIndex={()=>setShowIndex(index)}
+             />
         ))}
         </div>
        

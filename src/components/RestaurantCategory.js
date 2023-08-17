@@ -4,10 +4,13 @@ import {BiSolidUpArrow} from "react-icons/bi"
 
 import Itemlist from "./ItemList"
 import { useState } from "react"
-const Restaurantcategory = ({ data }) => {
-    const [ showItem, setShowItem]= useState(false)
+const Restaurantcategory = ({ data, showItem, setShowIndex }) => {
+    
     const handleClick=()=>{
-        setShowItem(!showItem)
+        
+            setShowIndex();
+            
+     
         // if(showItem==false){
         //     setShowItem(true)
         // }
