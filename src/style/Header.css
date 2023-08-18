@@ -1,38 +1,60 @@
-.header{
+.app__navbar{
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100px;
-    border-bottom: 4px solid var(--primary);
+
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    z-index: 2;
    
 }
-.logo-container{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 2rem;
-    font-size: large;
-    color: var(--primary);
-    
+
+.app__navbar-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-.logo{
-   width: 80px;
-   padding: 5px;
+.app__navbar-logo p{
+    width: 90px;
+    font-weight: 400;
+    color: var(--primary);   
+}
+.app__navbar-logo p:hover{
+    color: grey;
+   
+}
+.app__navbar-links{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+@media screen and (max-width: 900px) {
+    .app__navbar-links{
+        display: none;
+    }
 }
 
-.nav-items{
-
-}
 .nav-items-bars{
     padding: 15px;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(84, 82, 82);
     font-size: 18px;
+    text-transform: uppercase;
+
+    transition:all 0.3s ease-in-out;
 }
 .nav-items-bars:hover{
     color: var(--primary);
-    border-bottom: 3px solid var(--primary);
+   
 }
 .login-btn{ 
     padding: 1rem;
@@ -43,4 +65,84 @@
     background-color:var(--primary);
     border: none;
     border-radius: 20px;
+}
+
+.app__navbar-menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: var(--primary);
+}
+@media screen and (min-width: 900px) {
+    .app__navbar-menu{
+        display: none;
+    }
+}
+.app__navbar-menu svg{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.app__navbar-menu div{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    
+
+    padding: 1rem;
+
+    width: 60%;
+    height: 80vh;
+    
+    color: black; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(168,168,168,0.25);
+}
+@media screen and (min-width: 900px) {
+    .app__navbar-menu div{
+        display: none;
+    }
+}
+.app__navbar-menu div svg{
+    width: 35px;
+    height: 35px;
+    color: rgb(0, 0, 0);
+}
+.app__navbar-menu div ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.link{
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: grey;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease-in-out;
+}
+.link:hover{
+    color: var(--primary);
 }
