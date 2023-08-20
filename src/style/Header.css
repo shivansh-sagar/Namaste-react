@@ -6,7 +6,7 @@
     align-items: center;
 
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(242, 239, 245, 0.25);
     backdrop-filter: blur(2px);
     
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -103,7 +103,7 @@
     width: 60%;
     height: 80vh;
     
-    color: black; 
+    color: rgb(232, 229, 229); 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -120,7 +120,7 @@
 .app__navbar-menu div svg{
     width: 35px;
     height: 35px;
-    color: rgb(0, 0, 0);
+    color: var(--primary);
 }
 .app__navbar-menu div ul{
     list-style: none;
@@ -144,5 +144,10 @@
     transition: all 0.3s ease-in-out;
 }
 .link:hover{
-    color: var(--primary);
+    color:var(--primary);
+}
+.dUser{
+    margin: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
 }

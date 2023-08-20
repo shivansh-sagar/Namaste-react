@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, useState } from "react";
 import ReactDOM from "react-dom/client";
-
 import Header from "./components/Header";
 import Body from "./components/Body";
 import About from "./components/About"
@@ -30,9 +29,13 @@ const  AppLayout =() =>{
   // }
   return (
     <div className="app" >
+      {/* <Header/> */}
+      
       <Header/>
-      <Outlet/>
+        <Outlet/>
+      
       <Footer/>
+      
     </div>
   );
 };

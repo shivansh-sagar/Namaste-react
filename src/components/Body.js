@@ -51,7 +51,7 @@ const Body = () => {
   }
 
   return listOfRestaurant.length == 0 ? <Shimmer /> : (
-    <div className="body">
+    <div className="body pt-24">
       <div className="body-fun">
 
         {/* Top rated Restaurant */}

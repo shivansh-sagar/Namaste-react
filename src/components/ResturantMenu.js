@@ -23,9 +23,9 @@ const ResturantMenu = () => {
             ctg.card?.card?.["@type"] ===
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
         );
-    console.log(categories)
     
-    const[showIndex, setShowIndex]= useState(1)
+    
+    const[showIndex, setShowIndex]= useState(0)
 
     return resInfo === null ? (
         <Shimmer />
