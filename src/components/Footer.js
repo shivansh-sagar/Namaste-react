@@ -1,22 +1,31 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import "../style//Footer.css"
 import UserContext from "../utils/UserContext"
 const Footer = () => {
     const { loggedInUser } = useContext(UserContext)
-    const {theme} = useContext(UserContext)
-    console.log(theme)
+    const {dark, light} = useContext(UserContext)
+    const [togglemode, setToggleMode] =useState(light);
+    const handleclick=()=>{
+        if(togglemode==light){
+            setToggleMode(dark)
+        }
+        else{
+            setToggleMode(light)
+        }
+    }
     return (
         <>
 
-            <div className="footer-container flex
-             justify-evenly bg-slate-900 p-5 border border-t-2 text-white border--500">
+            <div className={`${togglemode} footer-container flex
+             justify-evenly p-5  border-t-2 border-green-500`}>
                 <div className="flex items-center flex-col">
-                    <p className={`${theme}`}>contact</p>
+                    <p className="">contact</p>
                     <p>email</p>
                     <p>social links</p>
                 </div>
                 <div>
                     <h1>{loggedInUser}</h1>
+                    <button className="bg-yellow-400" onClick={handleclick}>mode</button>
                 </div>
                 
             </div>

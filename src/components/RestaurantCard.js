@@ -1,16 +1,21 @@
 import { CDN_URL } from "../utils/constant";
 import "../style/RestaurantCard.css"
+import UserContext from "../utils/UserContext"
+import { useContext } from "react";
 
 
 const RestaurantCard = (props) => {
+  const {text,dark,light, card}= useContext(UserContext)
+  console.log(text)
   const { resData } = props;
-  console.log(resData);
   const { cloudinaryImageId, name, cuisines, avgRating } = resData.info;
   let img = CDN_URL + cloudinaryImageId;
+  
+  
 
   return (
 
-    <div className="res-card hover:bg-purple-50">
+    <div className={` ${card} res-card hover:bg-purple-50`} >
       <div className="res-img">
         <img className="res-logo"
           src={img} loading="lazy" alt="food-logo" />
@@ -19,6 +24,7 @@ const RestaurantCard = (props) => {
         <h3 className="text-xl">{name}🍲 </h3>
         <details><summary>{cuisines.slice(0, 2).join(", ")}</summary><p>{cuisines.slice(2).join(", ")}</p></details>
         <span>{avgRating}</span>
+        <h1>{text}</h1>
       </div>
     </div>
   );

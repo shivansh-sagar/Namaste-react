@@ -1,15 +1,20 @@
 import RestaurantCard, { isVeg } from "./RestaurantCard";
-import { useState, useEffect } from "react"
+
 import Shimmer from "./Shimmer";
+import "../style/Body.css"
+import { useState, useEffect, useContext } from "react"
+
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import "../style/Body.css"
+
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { BsSearchHeartFill } from "react-icons/bs";
+import UserContext, {REST_API_MUM, REST_API_SLT} from "../utils/UserContext";
+
 
 
 const Body = () => {
-
+const{dark,light}=useContext(UserContext)
   //Local State Variable - Super powerful variable
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filterResturant, setfilterResturant] = useState([]);
@@ -22,11 +27,10 @@ const Body = () => {
   }, [])
 
   const fetchData = async () => {
-    // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2585371&lng=82.06598579999999&page_type=DESKTOP_WEB_LISTING"); //sultanpur
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2856374&lng=72.8691092&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"); //Mumbai
+    // const data = await fetch(REST_API_SLT); //sultanpur
+    const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2856374&lng=72.8691092&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"); //Mumbai
 
     const json = await data.json();
-    console.log(json)
     //optional chaining
     setListOfRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setfilterResturant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -49,14 +53,15 @@ const Body = () => {
     // console.log(filtersearch);
     setfilterResturant(filtersearch)
   }
-
+  
+  
   return listOfRestaurant.length == 0 ? <Shimmer /> : (
-    <div className="body pt-24">
+    <div className={`${dark} body pt-24`}>
       <div className="body-fun">
 
         {/* Top rated Restaurant */}
         <div className="filter">
-          <button className="filter-btn p-1 " onClick={() => {
+          <button className={`${dark} filter-btn p-1`}  onClick={() => {
 
             const filtereData = listOfRestaurant.filter(
               (res) => res.info.avgRating > 4

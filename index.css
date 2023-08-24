@@ -20,4 +20,15 @@ html, body {
     padding: 10px;
     border: 2px solid red;
 }
-.theme{background-color: red;}
+.theme_light{
+    background-color: white;
+    color: #000000;
+}
+.theme_dark{
+    background-color: #121214;
+    color: #16d022;
+}
+.LessDark{
+    background-color: rgb(73, 73, 73);
+    color:#16d022
+}

@@ -1,6 +1,6 @@
-import React, { Suspense, lazy, useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
+
 import Body from "./components/Body";
 import About from "./components/About"
 import Contact from "./components/Contact";
@@ -9,7 +9,8 @@ import ResturantMenu from "./components/ResturantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Shimmer from "./components/Shimmer";
-
+import Header from "./components/Header";
+import UserContext from "./utils/UserContext";
 // not using keys (not acceptable) <<< index as key <<<<<<< unique id (best practice)
 
 const Grocery= lazy(()=>import("./components/Grocery"))
@@ -17,26 +18,18 @@ const Grocery= lazy(()=>import("./components/Grocery"))
 
 
 const  AppLayout =() =>{
+
+ return (
   
-  // const [theme, setTheme] = React.useState("dark");
-  // const changemode=()=>{
-  //   if(theme==="light"){
-  //     setTheme('dark')
-  //   }
-  //   else{
-  //     setTheme('dark')
-  //   }
-  // }
-  return (
     <div className="app" >
-      {/* <Header/> */}
-      
+    
       <Header/>
-        <Outlet/>
-      
+    
+      <Outlet/>
       <Footer/>
       
     </div>
+ 
   );
 };
  const appRouter = createBrowserRouter([

@@ -6,7 +6,8 @@ import "../style/RestaurantMenu.css"
 import { AiFillStar } from 'react-icons/ai'
 import { MdRestaurantMenu } from 'react-icons/md'
 import Restaurantcategory from "./RestaurantCategory";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 
 const dummy = 'https://image.freepik.com/free-vector/food-logo-design_139869-254.jpg';
@@ -24,14 +25,14 @@ const ResturantMenu = () => {
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
         );
     
-    
+    const{dark,light,card}= useContext(UserContext)
     const[showIndex, setShowIndex]= useState(0)
 
     return resInfo === null ? (
         <Shimmer />
     ) : (<>
         {/* Top banner */}
-        <div className="ResturantMain-cont">
+        <div className={` ${dark} ResturantMain-cont`}>
 
             <img className="ResturantMenu-img" src={info.cloudinaryImageId ? CDN_URL + info.cloudinaryImageId : dummy} alt="" />
 
@@ -54,7 +55,7 @@ const ResturantMenu = () => {
         
 
         {/* catagories accodions */}
-        <div className="flex flex-col align-middle"> { categories.map((category, index)=>
+        <div className={`${dark} flex flex-col align-middle`}> { categories.map((category, index)=>
         (
             <Restaurantcategory key={category?.card?.card.title}
              data={category?.card?.card}

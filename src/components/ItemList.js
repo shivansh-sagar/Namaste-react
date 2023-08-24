@@ -7,7 +7,7 @@ const Itemlist = ({ item }) => {
     return (
         <div className="">
             {item.map((item) => (
-                <div className=" MenuItemList m-2 p-2  flex  items-center border-b-4   sm:flex-row border-purple-500 md:border-green-500 flex-col  lg:border-green-500" key={item.card.info.id}>
+                <div className=" MenuItemList m-2 p-2  flex  items-center border-b-4   sm:flex-row border-green-500 hover:bg-slate-900" key={item.card.info.id}>
 
                     <img className="MenuItems-img" src={item.card.info.imageId ? CDN_URL + item.card.info.imageId : dummy} />
 
@@ -19,7 +19,7 @@ const Itemlist = ({ item }) => {
                         {/* <p>{item.card.info.isBestseller}</p> */}
                         <p className=" text-xs text-slate-500 md:text-sm">{item.card.info.description}
                         </p>
-                        <button className=" bg-green-300  p-2 my-2 mx-1/2 w-1/2 ">add</button>
+                        <button className=" bg-green-300 text-white p-2 my-2 mx-1/2 w-1/2 ">add</button>
                     </div>
                     {/* veg filter */}
                     

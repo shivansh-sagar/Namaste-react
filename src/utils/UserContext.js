@@ -2,7 +2,10 @@ import { createContext } from "react";
 
 const UserContext= createContext({
     loggedInUser: "default User",
-    theme:"theme"
+    dark:"theme_dark",
+    light:"theme_light",
+    text:"dummy",
+    card: "LessDark"
 });
 
 export default UserContext;
