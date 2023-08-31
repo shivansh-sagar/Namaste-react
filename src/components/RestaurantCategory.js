@@ -20,9 +20,9 @@ const Restaurantcategory = ({ data, showItem, setShowIndex }) => {
         //     setShowItem(false)
         // }
     }
-    const{dark,light,card}= useContext(UserContext)
+    const{theme,card}= useContext(UserContext)
     return (
-        <div className={` ${card} w-8/12 shadow-lg m-auto my-4 p-4`}>
+        <div className={` w-8/12 shadow-lg shadow-zinc-800 m-auto my-4 p-4`}>
             <div className="flex  justify-between cursor-pointer" onClick={handleClick}>
                 <span className=" font-bold text-md" >{data.title} ({data.itemCards.length})</span>
                 <span className="mt-1 text-sm">{showItem==true ? <BiSolidUpArrow/> :<AiFillCaretDown/>}</span>

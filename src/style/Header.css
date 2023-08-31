@@ -6,7 +6,7 @@
     align-items: center;
 
     padding: 1rem 2rem;
-    background: rgba(242, 239, 245, 0.25);
+    background: rgba(184, 184, 184, 0.385);
     backdrop-filter: blur(2px);
     
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -23,10 +23,10 @@
 .app__navbar-logo p{
     width: 90px;
     font-weight: 400;
-    color: var(--primary);   
+    color:rgb(0, 255, 4)
 }
 .app__navbar-logo p:hover{
-    color: grey;
+    color:rgb(84, 252, 0);
    
 }
 .app__navbar-links{
@@ -46,14 +46,14 @@
     padding: 15px;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(84, 82, 82);
+    color: rgb(184, 181, 181);
     font-size: 18px;
     text-transform: uppercase;
 
     transition:all 0.3s ease-in-out;
 }
 .nav-items-bars:hover{
-    color: var(--primary);
+    color:rgb(84, 252, 0);
    
 }
 .login-btn{ 
@@ -76,8 +76,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    background: var(--primary);
+    color:rgb(84, 252, 0);
+    background: grey;
 }
 @media screen and (min-width: 900px) {
     .app__navbar-menu{
@@ -103,13 +103,13 @@
     width: 60%;
     height: 80vh;
     
-    color: rgb(232, 229, 229); 
+    color: rgb(201, 201, 201); 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
 
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0 0 20px rgba(168,168,168,0.25);
 }
 @media screen and (min-width: 900px) {
@@ -120,7 +120,7 @@
 .app__navbar-menu div svg{
     width: 35px;
     height: 35px;
-    color: var(--primary);
+    color:rgb(84, 252, 0)
 }
 .app__navbar-menu div ul{
     list-style: none;
@@ -144,10 +144,71 @@
     transition: all 0.3s ease-in-out;
 }
 .link:hover{
-    color:var(--primary);
+    color:rgb(84, 252, 0);
 }
 .dUser{
     margin: 1rem;
     font-size: 1rem;
     text-transform: uppercase;
 }
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #11ff00;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #444444;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 4px #11ff00;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

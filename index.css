@@ -4,7 +4,7 @@
 :root{
     --black:#12162c;
     --white:#fff;
-    --primary: rgb(164, 3, 222);
+    --primary: rgb(84, 252, 0);
     --secondary: rgb(0, 229, 46);
     
 }
@@ -29,6 +29,6 @@ html, body {
     color: #16d022;
 }
 .LessDark{
-    background-color: rgb(73, 73, 73);
+    background-color: rgb(183, 183, 183);
     color:#16d022
 }

@@ -15,7 +15,7 @@ const RestaurantCard = (props) => {
 
   return (
 
-    <div className={` ${card} res-card hover:bg-purple-50`} >
+    <div className={`  res-card  text-gray-500 hover:bg-purple-50 transition-all hover:scale-105 `} >
       <div className="res-img">
         <img className="res-logo"
           src={img} loading="lazy" alt="food-logo" />
@@ -33,9 +33,9 @@ const RestaurantCard = (props) => {
 export const isVeg = (RestaurantCard) => {
   return (props) => {
     return (
-      <div>
+      <div className="">
         <label className=" absolute bg-black text-white mx-2 p-2  rounded-md">Pure Veg</label>
-        <RestaurantCard {...props} />
+        <RestaurantCard {...props}  />
       </div>
     )
   }

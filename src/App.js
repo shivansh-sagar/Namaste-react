@@ -19,17 +19,28 @@ const Grocery= lazy(()=>import("./components/Grocery"))
 
 const  AppLayout =() =>{
 
+  const [mode,setMode]= useState("theme_light");
+  const toggleMode = ()=>{
+    if(mode==="theme_light"){
+      setMode("theme_dark")
+      
+    }
+    else{
+      setMode("theme_light")
+      
+    }
+  }
  return (
-  
+  <UserContext.Provider value={{theme:mode}}>
     <div className="app" >
     
-      <Header/>
+      <Header  toggleMode={toggleMode}/>
     
       <Outlet/>
-      <Footer/>
+      <Footer mode={mode}/>
       
     </div>
- 
+ </UserContext.Provider>
   );
 };
  const appRouter = createBrowserRouter([

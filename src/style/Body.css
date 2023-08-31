@@ -14,7 +14,7 @@
     margin: 10px;
     cursor: pointer;
     
-    color: white;
+    color: rgb(78, 78, 78);
     background-color: var(--primary);
     
     
@@ -69,7 +69,7 @@
     border-radius: 50%;
     position: absolute;
     right: 0px;
-    color: #c8b6cb;
+    color: #343334;
     background-color:var(--primary);
     pointer-events: painted;
     padding-left: 15px;

@@ -14,7 +14,7 @@ import UserContext, {REST_API_MUM, REST_API_SLT} from "../utils/UserContext";
 
 
 const Body = () => {
-const{dark,light}=useContext(UserContext)
+const{theme}=useContext(UserContext)
   //Local State Variable - Super powerful variable
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filterResturant, setfilterResturant] = useState([]);
@@ -56,12 +56,12 @@ const{dark,light}=useContext(UserContext)
   
   
   return listOfRestaurant.length == 0 ? <Shimmer /> : (
-    <div className={`${dark} body pt-24`}>
+    <div className={`${theme} body pt-24`}>
       <div className="body-fun">
 
         {/* Top rated Restaurant */}
         <div className="filter">
-          <button className={`${dark} filter-btn p-1`}  onClick={() => {
+          <button className={`${theme} filter-btn p-1`}  onClick={() => {
 
             const filtereData = listOfRestaurant.filter(
               (res) => res.info.avgRating > 4

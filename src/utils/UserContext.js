@@ -5,7 +5,8 @@ const UserContext= createContext({
     dark:"theme_dark",
     light:"theme_light",
     text:"dummy",
-    card: "LessDark"
+    card: "LessDark",
+    theme:"theme_light",
 });
 
 export default UserContext;

@@ -24,15 +24,15 @@ const ResturantMenu = () => {
             ctg.card?.card?.["@type"] ===
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
         );
-    
-    const{dark,light,card}= useContext(UserContext)
+    console.log(info)
+    const{theme,dark,light,card}= useContext(UserContext)
     const[showIndex, setShowIndex]= useState(0)
 
     return resInfo === null ? (
         <Shimmer />
     ) : (<>
         {/* Top banner */}
-        <div className={` ${dark} ResturantMain-cont`}>
+        <div className={`ResturantMain-cont`}>
 
             <img className="ResturantMenu-img" src={info.cloudinaryImageId ? CDN_URL + info.cloudinaryImageId : dummy} alt="" />
 
@@ -55,7 +55,7 @@ const ResturantMenu = () => {
         
 
         {/* catagories accodions */}
-        <div className={`${dark} flex flex-col align-middle`}> { categories.map((category, index)=>
+        <div className={` ${theme}   flex flex-col align-middle`}> { categories.map((category, index)=>
         (
             <Restaurantcategory key={category?.card?.card.title}
              data={category?.card?.card}

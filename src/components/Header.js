@@ -9,9 +9,9 @@ import UserContext from "../utils/UserContext";
 
 const Header = (props) => {
   const [toggle, setToggle] = useState(false)
-  const {loggedInUser}=useContext(UserContext)
+  const { loggedInUser } = useContext(UserContext)
   console.log(loggedInUser)
-  const handleclick=()=>{
+  const handleclick = () => {
     console.log("ckicked")
   }
   // const [btnName, setbtnName] = useState("login");
@@ -27,7 +27,7 @@ const Header = (props) => {
         <Link className="nav-items-bars" to="/about">About</Link>
         <Link className="nav-items-bars" to="/contact">Contact</Link>
         <Link className="nav-items-bars" to="/Grocery">Grocery</Link>
-        <button className="nav-items-bars" onClick={handleclick}>mode</button>
+        <button className="nav-items-bars" onClick={props.toggleMode}>mode</button>
         {/* <button className="login-btn" onClick={() => {
           { props.changemode }
           btnName === "login" ? setbtnName("logout") : setbtnName("login")
@@ -47,7 +47,12 @@ const Header = (props) => {
                 <Link className="link" onClick={() => setToggle(false)} to="/about">about</Link>
                 <Link className="link" onClick={() => setToggle(false)} to="/contact">contact</Link>
                 <Link className="link" onClick={() => setToggle(false)} to="/grocery">Grocery</Link>
-                <button className="link" onClick={handleclick}>Mode</button>
+                
+                <label className="switch link" >
+                  <input type="checkbox"  onClick={props.toggleMode}/>
+                  <span className="slider round"></span>
+                </label>
+
                 <li className="dUser text-green-400 font-bold">{loggedInUser}</li>
               </ul>
             </div>
