@@ -24,8 +24,9 @@ const ResturantMenu = () => {
             ctg.card?.card?.["@type"] ===
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
         );
-    console.log(info)
-    const{theme,dark,light,card}= useContext(UserContext)
+    console.log(resInfo)
+    console.log(categories)
+    const{theme}= useContext(UserContext)
     const[showIndex, setShowIndex]= useState(0)
 
     return resInfo === null ? (

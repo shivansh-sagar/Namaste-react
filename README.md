@@ -25,3 +25,12 @@
 
 # Chunking, Code Splitting, Dynamic Bundling, Lazy loading, OnDemand Loading
 -   Is use to break down our app into smaller logical chunks
+
+
+# Redux
+- Install @reduxjs/toolkit and react-redux
+- build our store
+- Connect our store to our app
+- Slice (cartslice)
+- dispatch
+- selector
