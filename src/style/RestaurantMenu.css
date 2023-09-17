@@ -105,11 +105,19 @@
 }
 
 @keyframes example {
-    to {
-        /* background-color: rgb(231, 209, 250); */
+    /* 0%{
+        background-color: red;
     }
+    100%{
+        background-color: blue;
+    } */
 }
+.addtoCartBtn{
+border-radius: 26px;
+width: 75px;
+font-weight: 600;
 
+}
 
 .MenuItems-container1 {
     width: 70%;
@@ -122,12 +130,13 @@
 
 
 .MenuItems-img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
-    margin: 20px;
+    
+
 }
 
 .MenuItems-container2 {

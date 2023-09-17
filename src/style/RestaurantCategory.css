@@ -1,0 +1,4 @@
+.dropdownList{
+    transition: 500ms ease-in-out;
+    scroll-behavior: smooth;
+}

@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore"
+import Cart from "./components/Cart";
 // not using keys (not acceptable) <<< index as key <<<<<<< unique id (best practice)
 
 const Grocery = lazy(() => import("./components/Grocery"))
@@ -79,6 +80,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/res/resturant/:resId",
         element: <ResturantMenu />
+      },
+      {
+        path: "/cart",
+        element: <Cart/>
       }
     ],
     errorElement: <Error />

@@ -1,11 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root{
     --black:#12162c;
     --white:#fff;
     --primary: rgb(84, 252, 0);
     --secondary: rgb(0, 229, 46);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
     
 }
 
