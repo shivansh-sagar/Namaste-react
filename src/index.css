@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --black:#12162c;
+    --white:#fff;
+    --primary: rgb(84, 252, 0);
+    --secondary: rgb(0, 229, 46);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: #fff;
+}
+
+/* Styling of user-card */
+.user-card{
+    padding: 10px;
+    border: 2px solid red;
+}
+.theme_light{
+    background-color: white;
+    color: #000000;
+}
+.theme_dark{
+    background-color: #121214;
+    color: #16d022;
+}
+.LessDark{
+    background-color: rgb(183, 183, 183);
+    color:#16d022
+}

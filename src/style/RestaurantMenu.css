@@ -1,0 +1,153 @@
+/* Top banner */
+.ResturantMain-cont{
+    width: calc(100%);
+    position: relative;
+    height: 300px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+.ResturantMenu-img {
+    
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.ResturantMenu-txt {
+    
+    position: absolute;
+    margin: 10px 40px;
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    transform: translateY(50);   
+}
+
+.ResturantMenu-txt span {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+}
+.ResturantMenu-txt h1{
+    font-size: 50px;
+    text-shadow:4px 4px 8px rgb(0, 0, 0); 
+    padding-bottom: 2rem;     
+}
+
+.ResMenu-Rating {
+    width: 50px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 10px;
+    background: rgb(47, 189, 47);
+    font-size: 16px;
+}
+.myimg {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+@media screen and (max-width:900px) {
+    .myimg{
+        display:none;
+    }
+    
+}
+
+
+/* Middle menu */
+.ResMenu-Menu {
+    font-size: 25px;
+}
+
+.MenuItems {
+    margin: 100px;
+    list-style: none;
+}
+
+.Menu-cuisines {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+/* Menu List */
+
+
+/* .MenuItemList {
+    
+    background-color: rgb(255, 255, 255);
+    transition: width 100ms;
+
+
+} */
+
+.MenuItemList:hover {
+    scale: 1.05;
+    box-shadow: 10px 10px 8px rgb(70, 69, 69);
+    transition: 100ms;
+    cursor: pointer;
+    animation-name: example;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    /* 0%{
+        background-color: red;
+    }
+    100%{
+        background-color: blue;
+    } */
+}
+.addtoCartBtn{
+border-radius: 26px;
+width: 75px;
+font-weight: 600;
+
+}
+
+.MenuItems-container1 {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.MenuItems-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    
+
+}
+
+.MenuItems-container2 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.veg{
+    border: 2px solid greenyellow;
+}
+
+
