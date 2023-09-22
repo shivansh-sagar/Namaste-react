@@ -11,7 +11,7 @@ const Header = (props) => {
 
   // subscribing to the store using a selector
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems)
+  console.log(cartItems);
 
   return (
     <nav className="app__navbar ">
@@ -42,7 +42,7 @@ const Header = (props) => {
           mode
         </button>
 
-        <Link className="nav-items-bars flex " to='/cart'>
+        <Link className="nav-items-bars flex " to="/cart">
           Cart ({cartItems.length})item{" "}
           <h1>
             <GiShoppingCart></GiShoppingCart>
@@ -86,8 +86,11 @@ const Header = (props) => {
                 Grocery
               </Link>
 
-              <Link className="link flex" to='/cart'>
-                
+              <Link
+                className="link flex"
+                onClick={() => setToggle(false)}
+                to="/cart"
+              >
                 <h1>
                   <GiShoppingCart></GiShoppingCart>
                 </h1>
