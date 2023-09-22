@@ -44,10 +44,10 @@
   padding: 15px;
   cursor: pointer;
   text-decoration: none;
-  color: rgba(37, 37, 37, 0.818);
+  color: rgba(77, 77, 77, 0.818);
   font-size: 18px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.3s ease-in-out;
 }
 .nav-items-bars:hover {

@@ -1,0 +1,70 @@
+h1{
+    margin-top: 100px;
+    margin-right: 100px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    
+    
+    margin:150px auto;
+    perspective: 600px;
+}
+.cube{
+    width: 200px;
+    height: 200px;
+    
+    transform-style:preserve-3d ;
+    transform: translateZ(-150px) rotateX(0deg);
+    position: relative;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    to{
+        
+        transform: translateZ(-150px) rotateX(360deg) rotateY(360deg);
+       
+    }
+}
+/* .cube:hover{
+    transform: translateZ(-150px) rotateX(0deg) rotateY(360deg); */
+
+.face{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+
+}
+.front{
+    
+    background: rgba(0, 255, 255, 0.493);
+    transform: rotateY(0deg) translateZ(150px);
+}
+.right{
+    background: rgba(223, 105, 105, 0.318);
+    transform: rotateY(90deg) translateZ(150px);
+   
+}
+.back{
+   
+    background: rgba(86, 246, 0, 0.411);
+    transform: rotateY(180deg) translateZ(150px);
+}
+.left{
+
+    background: rgba(181, 52, 237, 0.54);
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.top{
+    
+    background: rgba(92, 92, 207, 0.545);
+    transform: rotateX(90deg) translateZ(150px);
+}
+.bottom{
+    
+    background: rgba(206, 168, 96, 0.405);
+    transform: rotateX(-90deg) translateZ(150px);
+}
